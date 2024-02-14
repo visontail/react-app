@@ -5,7 +5,6 @@ function App() {
 
   return (
     <>
-      <h2>List of items:</h2>
       <List />
     </>
   )
