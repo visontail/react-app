@@ -13,9 +13,10 @@ function ListItems({item}) {
     }
 
     return(
-        <p className={isSelected ? 'list-item-selected' : 'list-item'} onClick={handleSelected}
-        
-        >{item}</p>
+        <p className={isSelected ? 'list-item-selected' : 'list-item'}
+            onClick={handleSelected}>
+            {item}
+        </p>
     )
 }
 
