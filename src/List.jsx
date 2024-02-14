@@ -8,7 +8,7 @@ function List() {
         'item',
         6,
         new Date(),
-        <span key="react-element">React Element Item</span>,
+        <span key="react-element">React Element</span>,
     ]);
 
     /**
@@ -55,14 +55,12 @@ function List() {
         return number < 10 ? `0${number}` : number;
     }
 
-    
-
     return(
         <div className="list-container">
-            <h2>List of items:</h2>
+            <h2>List of items</h2>
             <div className="list">
                 {list.map((item, index) => {
-                    return <ListItems key={index} item={renderItem(item)} />
+                    return <ListItems key={index} item={renderItem(item)}/>
                 })}
             </div>
         </div>

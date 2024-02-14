@@ -4,6 +4,13 @@
     align-items: center;
     justify-content: center;
     width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(250, 240, 230, 0.5);
+}
+
+.list-container h2 {
+    color: rgb(250, 240, 230);
 }
 
 .list {
