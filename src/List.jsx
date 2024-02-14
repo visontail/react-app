@@ -6,7 +6,7 @@ function List() {
     const [list, setList] = useState([
         'item',
         6,
-        new Date(2000, 0, 1, 12, 0, 0),
+        new Date(),
         <span key="react-element">React Element Item</span>,
     ]);
 
