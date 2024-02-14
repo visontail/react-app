@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h1>Interview Task</h1>
+      <h2>List of items:</h2>
       <List />
     </>
   )
