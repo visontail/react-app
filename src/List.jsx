@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ListItems from "./ListItems.jsx";
+import './List.css';
 
 function List() {
 
@@ -12,11 +13,12 @@ function List() {
 
     return(
         <div className="list-container">
-            <ul>
+            <h2>List of items:</h2>
+            <div className="list">
                 {list.map((item, index) => {
                     return <ListItems key={index} item={item} />
                 })}
-            </ul>
+            </div>
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './ListItems.css';
 
 function ListItems({item}) {
 
@@ -47,7 +48,7 @@ function ListItems({item}) {
     }
 
     return(
-        <li>{renderItem(item)}</li>
+        <p className='list-item'>{renderItem(item)}</p>
     )
 }
 
