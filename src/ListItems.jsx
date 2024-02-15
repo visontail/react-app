@@ -7,6 +7,8 @@ function ListItems({item}) {
 
     function handleSelected() {
         setIsSelected(!isSelected);
+        console.log('Clicked on item:', item);
+        // becomes "unselected" 1 second after clicking on it.
         setTimeout(() => {
             setIsSelected(false);
         }, 1000);

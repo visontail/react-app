@@ -11,6 +11,22 @@ function List() {
         <span key="react-element">React Element</span>,
     ]);
 
+    const [selectedItems, setSelectedItems] = useState([]);
+
+    /**
+     * Handle the click event on an item
+     * @param {number} index - The index of the clicked item
+    */
+    function handleItemClick(index) {
+        const newList = [...selectedItems];
+        if (newList.includes(index)) {
+            newList.splice(newList.indexOf(index), 1);
+        } else {
+            newList.push(index);
+        }
+        setSelectedItems(newList);
+    }
+
     /**
      * Render an item based on its type
      * @param {string|number|Date|ReactElement}
@@ -43,7 +59,7 @@ function List() {
         const minutes = date.getMinutes();
         const seconds = date.getSeconds();
 
-        return `${year}-${month}-${day} ${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
+        return `${year}-${padZero(month)}-${padZero(day)} ${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
     }
 
     /**
@@ -60,7 +76,7 @@ function List() {
             <h2>List of items</h2>
             <div className="list">
                 {list.map((item, index) => {
-                    return <ListItems key={index} item={renderItem(item)}/>
+                    return <ListItems key={index} item={renderItem(item)} isSelected={selectedItems.includes(index)} onItemClick={() => handleItemClick(index)}/>
                 })}
             </div>
         </div>
